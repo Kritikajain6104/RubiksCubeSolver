@@ -1,7 +1,23 @@
 #include <iostream>
-using namespace  std;// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+using namespace  std;
+
+#include "Model/RubiksCube3dArray.cpp"
 int main() {
-    cout<<"Hello"<<endl;
+    // RubiksCube3dArray object3DArray;
+    //
+    // object3DArray.print();
+    //
+    // if (object3DArray.isSolved()) cout << "SOLVED\n\n";
+    // else cout << "NOT SOLVED\n\n";
+    //
+    // object3DArray.u();
+    // object3DArray.uPrime();
+    //
+    //
+    // object3DArray.print();
+    //
+    // if (object3DArray.isSolved()) cout << "SOLVED\n\n";
+    // else cout << "NOT SOLVED\n\n";
 
     return 0;
 }
