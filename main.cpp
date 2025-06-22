@@ -1,4 +1,6 @@
 #include <iostream>
+
+#include "Solver/IDDFSSolver.h"
 using namespace  std;
 
 #include "Model/RubiksCube1dArray.cpp"
@@ -35,7 +37,7 @@ int main() {
     // object1dArray.print();
     // if (object1dArray.isSolved()) cout << "SOLVED\n\n";
     // else cout << "NOT SOLVED\n\n";
-    BFSSolver<RubiksCube3dArray,Hash3d>solver(object3DArray);
+    IDDFSSolver<RubiksCube3dArray,Hash3d>solver(object3DArray);
 
     vector<RubiksCube::MOVE>moves=solver.solve();
     for (auto move : moves) {
