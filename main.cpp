@@ -3,8 +3,8 @@ using namespace  std;
 
 #include "Model/RubiksCube1dArray.cpp"
 #include "Model/RubiksCube3dArray.cpp"
-#include "Solver/DFSSolver.cpp"
-#include "Solver/BFSSolver.cpp"
+#include "Solver/DFSSolver.h"
+#include "Solver/BFSSolver.h"
 
 int main() {
     RubiksCube3dArray object3DArray;
