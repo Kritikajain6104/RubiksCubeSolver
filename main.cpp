@@ -4,6 +4,7 @@ using namespace  std;
 #include "Model/RubiksCube1dArray.cpp"
 #include "Model/RubiksCube3dArray.cpp"
 #include "Solver/DFSSolver.cpp"
+#include "Solver/BFSSolver.cpp"
 
 int main() {
     RubiksCube3dArray object3DArray;
@@ -13,8 +14,11 @@ int main() {
     if (object3DArray.isSolved()) cout << "SOLVED\n\n";
     else cout << "NOT SOLVED\n\n";
 
-    object3DArray.u();
-    object3DArray.uPrime();
+    vector<RubiksCube::MOVE>moveToshuffle=object3DArray.randomShuffleCube(5);
+    for (auto move : moveToshuffle) {
+        cout<<object3DArray.getMove(move)<<endl;
+    }
+    // object3DArray.uPrime();
 
 
     object3DArray.print();
@@ -31,12 +35,13 @@ int main() {
     // object1dArray.print();
     // if (object1dArray.isSolved()) cout << "SOLVED\n\n";
     // else cout << "NOT SOLVED\n\n";
-    DFSSolver<RubiksCube3dArray,Hash3d>solver(object3DArray,8);
+    BFSSolver<RubiksCube3dArray,Hash3d>solver(object3DArray);
 
     vector<RubiksCube::MOVE>moves=solver.solve();
     for (auto move : moves) {
         cout << RubiksCube::getMove(move) << "\n";
     }
+    solver.rubiksCube.print();
 
 
     return 0;
