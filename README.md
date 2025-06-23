@@ -11,7 +11,6 @@ Contains different representations of the Rubik's Cube:
 - **RubiksCube.h** - Base abstract class defining the interface
 - **RubiksCube3dArray.cpp** - 3D array representation
 - **RubiksCube1dArray.cpp** - Flattened 1D array representation
-- **RubiksCubeBitboard.cpp** - Bitboard representation for speed
 
 ### Solver
 Contains various search algorithms to solve the cube:
